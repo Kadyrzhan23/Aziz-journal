@@ -12,8 +12,8 @@ export default function Home() {
       <div className={`${styles.section_1}`}>
         <Container maxWidth="xl">
           <div className={styles.section_1_row_1}>
-            <img src="/public/icon-tdau2.png" alt="" width="64" height="64" />
-            <img src="/public/oliy-logo2.png" alt="" width="44" height="44" />
+            <img src="/icon-tdau2.png" alt="" width="64" height="64" />
+            <img src="/oliy-logo2.png" alt="" width="44" height="44" />
             <img
               src="/public/kafedra-logo2.png"
               alt=""
