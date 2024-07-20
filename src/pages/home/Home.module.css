@@ -1,0 +1,87 @@
+.section_1 , .section_02 , .section_03{
+    font-family: "PT serif", serif;
+}
+.section_1 {
+    position: absolute;
+    right: 0;
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    background-repeat: no-repeat;
+    background-size: 100% 100%;
+    background-image: url('backgroud/hero-banner-gradient-by.image.large_2x.jpg');
+}
+
+.section_1_row_1 {
+    display: flex;
+    justify-content: end;
+    align-items: center;
+}
+
+.section_1_row_2 {
+    font-family: "PT serif", serif;
+    /* font-style: italic; */
+    font-size: 48px;
+    font-weight: 600;
+
+}
+
+.section_1_row_3 {
+    font-family: "PT serif", serif;
+    font-size: 36px;
+    font-weight: 500;
+    display: flex;
+    justify-content: end;
+}
+
+.section_02 {
+    width: 100%;
+    height: 653px;
+}
+
+.section_03_row_01 {
+    /* text-align: center;
+    font-size: 28px;
+    font-weight: 700; */
+
+}
+
+@media (max-width: 1140px) {
+    .section_02{
+        height: 550px;
+    }
+
+    .section_1_row_2 {
+        font-size: 36px;
+        font-weight: 600;
+    
+    }
+
+    .section_1_row_3 {
+        font-size: 24px;
+    }
+}
+
+@media (max-width: 866px) {
+    .section_02{
+        height: 600px;
+    }
+}
+
+@media (max-width: 670px) {
+
+    .section_1_row_2 {
+        font-size: 30px;
+    
+    }
+
+    .section_1_row_3 {
+        font-size: 20px;
+    }
+}
+
+/* @media (max-width: 525px) {
+    .section_02{
+        height: 840px;
+    }
+} */

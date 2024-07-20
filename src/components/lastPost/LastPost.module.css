@@ -1,0 +1,31 @@
+.wrapper {
+    width: 360px;
+    min-height: 400px;
+    /* border: 1px solid black; */
+    box-shadow: 0 0 8px black;
+    cursor: pointer;
+    position: relative;
+    transition: all 500ms ease s;
+}
+
+.wrapper:hover{
+    top: -10px;
+    transition: all 0.5s ease 0.5s;
+
+}
+
+.image {
+    width: 100%;
+}
+
+.postTheme {
+    text-align: center;
+    font-weight: 700;
+    margin-bottom: 10px;
+}
+
+.description {
+    text-align: center;
+    font-size: 14px;
+    margin-bottom: 20px;
+}
