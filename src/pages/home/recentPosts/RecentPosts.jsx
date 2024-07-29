@@ -8,7 +8,7 @@ export default function () {
       {posts !== null && (
         <>
           {posts.map((post, index) => {
-            return <Post key={index} post={post} />;
+            return <Post key={index} post={post} index={index} />;
           })}
         </>
       )}

@@ -6,3 +6,10 @@
     row-gap: 10px;
 }
 
+@media (max-width: 1350px) {
+    .container {
+        padding: 5px;
+    }
+
+
+}

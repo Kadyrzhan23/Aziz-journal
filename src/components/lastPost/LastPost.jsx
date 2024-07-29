@@ -1,8 +1,11 @@
-import React from "react";
+import React, { useEffect } from "react";
 import styles from "./LastPost.module.css";
+import { useNavigate } from "react-router-dom";
 export default function LastPost({ post, index }) {
+  const navigate = useNavigate()
+  
   return (
-    <div className={styles.wrapper}>
+    <div className={styles.wrapper} onClick={()=> navigate(`/post/${index + 3}`)}>
       <img
         src={`./post/image${index + 5}.jpg`}
         alt=""

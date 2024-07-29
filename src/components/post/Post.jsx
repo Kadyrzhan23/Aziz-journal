@@ -1,10 +1,12 @@
 import React from "react";
 import styles from "./Post.module.css";
 import { useTranslation } from "react-i18next";
-export default function Post({ post }) {
+import { useNavigate } from "react-router-dom";
+export default function Post({ post ,index}) {
   const { t } = useTranslation();
+  const navigate = useNavigate()
   return (
-    <div className={styles.wrapper}>
+    <div className={styles.wrapper} onClick={()=> navigate(`/post/${index + 1}`)}>
       <div className={styles.header}>
         <img src="./post/user.png" alt="" className={styles.avatar} />
         <div className={styles.postInfo}>
