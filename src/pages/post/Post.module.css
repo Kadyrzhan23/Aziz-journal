@@ -1,0 +1,12 @@
+.header{
+    height: 80px;
+    border: 1px solid black;
+    display: flex;
+    justify-content: space-between;
+}
+
+.avatar{
+    width: 80px;
+    border-radius: 50%;
+    border: 1px solid black;
+}

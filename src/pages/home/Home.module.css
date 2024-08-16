@@ -18,6 +18,12 @@
     align-items: center;
 }
 
+.section_1_row_1 img:nth-child(2){
+    position: relative;
+    top: -5px;
+    left: -7px;
+}
+
 .section_1_row_2 {
     font-family: "PT serif", serif;
     /* font-style: italic; */

@@ -5,12 +5,12 @@
     box-shadow: 0 0 8px black;
     cursor: pointer;
     position: relative;
-    transition: all 500ms ease s;
+    transition: all 500ms ease 0.5s;
 }
 
 .wrapper:hover{
     top: -10px;
-    transition: top 0.5s ease 0.5s;
+    transition: all 2s linear 0.5s;
 
 }
 

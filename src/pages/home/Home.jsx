@@ -55,8 +55,8 @@ export default function Home() {
             variants={textAnimation}
             className={styles.section_1_row_2}
           >
-            {/* WORL AND SCIENCE DEVELOPMENT JOURNAL */}
-            {t("mainH1")}
+            WORL AND SCIENCE DEVELOPMENT JOURNAL
+            {/* {t("mainH1")} */}
           </motion.p>
           <motion.p
             initial="hidden"
