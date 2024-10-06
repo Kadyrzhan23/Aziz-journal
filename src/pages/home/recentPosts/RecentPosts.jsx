@@ -1,17 +1,19 @@
 import React from "react";
 import Post from "../../../components/post/Post";
 import styles from "./RecentPosts.module.css";
+import { useSelector } from "react-redux";
 export default function () {
-  const posts = [1, 2];
+  const allPosts = useSelector((state) => state.post.allPosts);
   return (
     <div className={styles.container}>
-      {posts !== null && (
+      {allPosts !== null && (
         <>
-          {posts.map((post, index) => {
-            return <Post key={index} post={post} index={index} />;
+          {allPosts.map((post, index) => {
+            return <>{ index > 7 && index < 10 && <Post key={index} post={post} index={index} />}</>;
           })}
         </>
       )}
     </div>
-  );
+  );    
 }
+ 

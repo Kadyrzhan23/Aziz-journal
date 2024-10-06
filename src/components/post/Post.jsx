@@ -5,6 +5,7 @@ import { useNavigate } from "react-router-dom";
 export default function Post({ post ,index}) {
   const { t } = useTranslation();
   const navigate = useNavigate()
+  const image = `../../../public/post/post${index + 1}.jpg`
   return (
     <div className={styles.wrapper} onClick={()=> navigate(`/post/${index + 1}`)}>
       <div className={styles.header}>
@@ -15,10 +16,21 @@ export default function Post({ post ,index}) {
             <div className={styles.postInfo_font}>{t("postTema") + ":"}</div>
           </div>
           <div className={styles.postInfo_col}>
-            <div className={styles.postInfo_font}>Сафонов Николай</div>
+            {/* <div className={styles.postInfo_font}>Сафонов Николай</div> */}
+            {
+              post.author.map(person => {
+                return(
+                  <div className={styles.postInfo_font}>{person}</div>
+                )
+              })
+            }
             <div className={styles.postInfo_font}>Lorem ipsum</div>
           </div>
         </div>
+      </div>
+      <div className={styles.main}>
+        <img style={{marginTop:5}} src={post.image} alt="" />
+        <p>{post.description}</p>
       </div>
     </div>
   );

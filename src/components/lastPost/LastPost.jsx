@@ -18,22 +18,18 @@ export default function LastPost({ post, index }) {
     <motion.div
     initial="initial"
     whileHover="after"
-    variants={variants}
+    // variants={variants}
     className={styles.wrapper} onClick={()=> navigate(`/post/${index + 3}`)}>
       <img
-        src={`./post/image${index + 5}.jpg`}
+        src={post.image}
         alt=""
         className={styles.image}
       />
       <div className={styles.postTheme}>
-        Контент-анализ публикаций и программ гражданской науки в сфере экологии
+        {post.title}
       </div>
       <div className={styles.description}>
-        Введение. В статье рассмотрены инициативы гражданской науки в сфере
-        экологии. Выявлена специфика развития подобных иници­атив в России и в
-        зарубежных странах, а также обозначены пер­спективы развития
-        экологических инициатив в сфере гражданской науки. Методы исследования.
-        Применен общенаучный метод кон­тент-анализа.
+        {post.description}
       </div>
     </motion.div>
   );

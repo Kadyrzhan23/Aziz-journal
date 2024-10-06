@@ -6,6 +6,8 @@ import RecentPosts from "./recentPosts/RecentPosts";
 import { useTranslation } from "react-i18next";
 import LastPosts from "./last-posts/LastPosts";
 import { motion } from "framer-motion";
+import AnimateBar from "./animateBar/AnimateBar";
+import background from '../../../public/backgroud/hero-banner-gradient-by.image.large_2x.jpg'
 export default function Home() {
   const textAnimation = {
     hidden: {
@@ -39,14 +41,14 @@ export default function Home() {
             whileInView={"visible"}
             className={styles.section_1_row_1}
           >
-            <img src="/icon-tdau2.png" alt="" width="64" height="64" />
+            {/* <img src="/icon-tdau2.png" alt="" width="64" height="64" />
             <img src="/oliy-logo2.png" alt="" width="44" height="44" />
             <img
               src="/public/kafedra-logo2.png"
               alt=""
               width="54"
               height="54"
-            />
+            /> */}
           </motion.div>
           <motion.p
             initial="hidden"
@@ -55,7 +57,7 @@ export default function Home() {
             variants={textAnimation}
             className={styles.section_1_row_2}
           >
-            WORL AND SCIENCE DEVELOPMENT JOURNAL
+            {"the role of agriculture and medicine in science".toUpperCase()}
             {/* {t("mainH1")} */}
           </motion.p>
           <motion.p
@@ -67,8 +69,8 @@ export default function Home() {
           >
             {t("mainH2")}
           </motion.p>
-
-          <Section />
+          <AnimateBar />
+          {/* <Section /> */}
         </Container>
       </div>
       <div className={styles.section_02}>Недавные посты</div>

@@ -1,16 +1,23 @@
 import React from "react";
 import styles from "./LastPosts.module.css";
 import LastPost from "../../../components/lastPost/LastPost";
+import { useSelector } from "react-redux";
 export default function LastPosts() {
-    const posts = [1,2,3,4]
+    const allPosts = useSelector((state) => state.post.allPosts);
+
   return <div className={styles.wrapper}>
     {
-        posts !== null && (
+        allPosts !== null && (
             <>
             {
-                posts.map((post,index) =>{
+                allPosts.map((post,index) =>{
                     return (
-                        <LastPost key={index} index={index} post={post}/>
+                        <>
+                        {
+                            index > 8 &&
+                            <LastPost key={index} index={index} post={post}/>
+                            }
+                        </>
                     )
                 })
             }

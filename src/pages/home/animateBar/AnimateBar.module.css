@@ -1,0 +1,77 @@
+.wrapper {
+    height: 400px;
+}
+
+.tempWrapper {
+    width: 100%;
+    height: 100%;
+    /* border: 1px solid black; */
+    display: flex;
+    align-items: center;
+}
+
+.box {
+    width: 30%;
+}
+
+.barWrapper {
+    width: 70%;
+    height: 330px;
+    /* border: 1px solid black; */
+    overflow-x: scroll;
+
+}
+
+.barWrapper::-webkit-scrollbar {
+    display: none;
+}
+
+.bar {
+    height: 100%;
+    width: 1840px;
+    display: flex;
+    column-gap: 15px;
+}
+
+.barElem {
+    height: 100% !important;
+    width: 250px !important;
+    /* border: 1px solid black; */
+    background-color: white;
+    border-radius: 10px;
+    overflow: hidden;
+    background-size: 100%;
+    display: flex;
+    flex-direction: column;
+justify-content: space-between;
+    /* align-items: self-end;
+    justify-content: flex-end; */
+    padding:10px 15px 30px 15px;
+    font-size: 14px;
+    color: rgba(255, 255, 255, 0.744);
+    /* opacity: ; */
+    text-align: center;
+
+}
+
+.barElem:hover{
+    color: rgb(91, 171, 240);
+}
+
+.barElem img {
+    width: 100%;
+    height: 100%;
+    /* background-size: 100  100; */
+    background-position: center;
+    background-repeat: no-repeat;
+    background-repeat: no-repeat;
+}
+
+.button{
+    align-self: flex-end;
+    background-color: rgb(44, 180, 44);
+    width: 150px;
+    height: 40px;
+    border: none;
+    border-radius: 5px;
+}

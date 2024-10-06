@@ -1,11 +1,12 @@
 .wrapper {
     width: 750px;
-    min-height: 500px;
+    /* min-height: 500px; */
     border: 1px solid black;
     flex: 0 0 auto;
     box-shadow: 0 0 4px #000;
     padding: 6px;
-
+    display: flex;
+    flex-direction: column;
 }
 
 .header {
@@ -45,6 +46,22 @@
 
 .wrapper img {
     max-width: 100%;
+}
+
+.main{
+    font-size: 18px;
+}
+
+.main img{
+    float: left;
+    width: 30%;
+    height: fit-content;
+    margin: 0 15px 15px 0;
+}
+
+.btn{
+    justify-self:flex-end ;
+    align-self: flex-end;
 }
 
 @media (max-width: 1600px) {

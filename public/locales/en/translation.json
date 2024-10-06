@@ -1,11 +1,13 @@
 {
     "mainH1":"WORL AND SCIENCE DEVELOPMENT JOURNAL",
-    "mainH2":"ALL SCIENTIFIC DIRECTION",
+    "mainH2":"AGRICULTURE AND MEDICINE",
     "linkHome":"home",
     "linkPosts":"posts",
     "linkAbout":"about",
     "linkContacts":"contacts",
     "postAvtor":"Аuthor",
-    "postTema":"Research topic"
+    "postTema":"Research topic",
+    "btnPodrobnee":"Go to",
+    "btnHeader":"Go public"
 
 }

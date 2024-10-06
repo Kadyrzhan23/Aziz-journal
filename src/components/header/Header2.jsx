@@ -1,18 +1,24 @@
 import React, { useEffect, useState } from "react";
 import styles from "./Header.module.css";
 import { useNavigate } from "react-router-dom";
-import { Button, FormControl, InputLabel, Select } from "@mui/material";
+// import { Button } from "@mui/material";
 import Menu from "@mui/material/Menu";
 import MenuItem from "@mui/material/MenuItem";
 import { Box, IconButton, Typography } from "@mui/material";
 import MenuIcon from "@mui/icons-material/Menu";
 import { useTranslation } from "react-i18next";
+import i18n from "../../utils/18n";
+import { AnimatePresence, motion } from "framer-motion";
+// import { Example } from "./burger/Example";
 
 export default function Header2() {
-  let selectedLanguage = window.localStorage.getItem('selectedLanguage');
+  const { t } = useTranslation();
+  let selectedLanguage = window.localStorage.getItem("selectedLanguage");
+  const [activeIndex, setActive] = useState(0);
   const [width, setWidth] = useState(window.innerWidth);
-  const [lang, setLang] = useState(selectedLanguage !== null ? selectedLanguage : "ru");
-  const { i18n, t } = useTranslation();
+  const [lang, setLang] = useState(
+    selectedLanguage !== null ? selectedLanguage : "ru"
+  );
   const pages = [
     { name: t("linkHome"), path: "home" },
     { name: t("linkPosts"), path: "posts" },
@@ -21,7 +27,7 @@ export default function Header2() {
   ];
   const navigate = useNavigate();
   const [anchorElNav, setAnchorElNav] = React.useState(null);
-  const [anchorElUser, setAnchorElUser] = React.useState(null);
+  const [setAnchorElUser] = React.useState(null);
   const handleOpenNavMenu = (event) => {
     setAnchorElNav(event.currentTarget);
   };
@@ -35,8 +41,8 @@ export default function Header2() {
   const langChange = (event) => {
     // console.log(event.target.value);
     const language = event.target.value;
-    selectedLanguage = language
-    window.localStorage.setItem("selectedLanguage",language)
+    selectedLanguage = language;
+    window.localStorage.setItem("selectedLanguage", language);
     setLang(language);
     i18n.changeLanguage(language);
   };
@@ -51,33 +57,17 @@ export default function Header2() {
     <div className={styles.wrapper}>
       <div className={styles.container}>
         {width > 670 ? (
-          <>
-            {pages.map((page, index) => (
-              <button
-                className={styles.link}
-                key={page}
-                onClick={() => {
-                  navigate(index === 0 ? "/" : `/${page.path}`);
-                }}
-                sx={{ my: 2, color: "white", display: "block" }}
-              >
-                {page.name.toLocaleUpperCase()}
-              </button>
+          <AnimatePresence>
+            {
+            pages.map((item, index) => (
+              <NavItem
+                key={item.name}
+                item={item}
+                isSelected={activeIndex === index}
+                handleClick={() => setActive(index)}
+              />
             ))}
-            {/* <FormControl sx={{ m: 1, minWidth: 120 }} size="small">
-              <InputLabel id="demo-select-small-label">language</InputLabel>
-              <Select
-                defaultChecked={"ru"}
-                label="language"
-                value={lang}
-                labelId="demo-select-small-label"
-              >
-                <MenuItem value={"ru"}>ru</MenuItem>
-                <MenuItem value={"uz"}>uz</MenuItem>
-                <MenuItem value={"uz"}>uz</MenuItem>
-                <MenuItem value={"kz"}>kz</MenuItem>
-              </Select>
-            </FormControl> */}
+            <button className="btn">{t("btnHeader")}</button>
             <span>
               <select onChange={langChange} value={lang}>
                 <option value={"ru"}>ru</option>
@@ -86,9 +76,10 @@ export default function Header2() {
                 <option value={"kz"}>kz</option>
               </select>
             </span>
-          </>
+          </AnimatePresence>
         ) : (
           <>
+          {/* <Example/> */}
             <Box
               sx={{
                 flexGrow: 1,
@@ -140,6 +131,7 @@ export default function Header2() {
                 ))}
               </Menu>
             </Box>
+            <button className="btn">{t("btnHeader")}</button>
             <span className={styles.lang}>
               <select onChange={langChange} value={lang}>
                 <option value={"ru"}>ru</option>
@@ -152,5 +144,34 @@ export default function Header2() {
         )}
       </div>
     </div>
+  );
+}
+
+function NavItem({ item, isSelected, handleClick }) {
+  return (
+    <motion.div
+      onClick={handleClick}
+      className={styles.navItem}
+      initial={{ color: "#000" }}
+      animate={{ color: isSelected ? "#0056D6" : "#000" }}
+    >
+      {isSelected && <ActiveLine/>}
+      {item.name.toUpperCase()}
+    </motion.div>
+  );
+}
+
+function ActiveLine() {
+  return (
+    <motion.div
+      layoutId="activeItem"
+      style={{
+        width: "25px",
+        height: "2px",
+        position: "absolute",
+        bottom: "8px",
+        backgroundColor: "#0056D6",
+      }}
+    />
   );
 }

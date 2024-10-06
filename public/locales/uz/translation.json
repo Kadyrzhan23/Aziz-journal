@@ -1,10 +1,12 @@
 {
     "mainH1":"JAHON VA FAN TARAQQIYOT JURNALI",
-    "mainH2":"BARCHA ILMIY YO'NALISHLAR",
+    "mainH2":"QISHLOQ XO'JALIGI VA MEDITSINA",
     "linkHome":"Bosh sahifa",
     "linkPosts":"maqolalar",
     "linkAbout":"biz haqimizda",
     "linkContacts":"aloqa",
     "postAvtor":"Muallif",
-    "postTema":"Tadqiqot mavzusi"
+    "postTema":"Tadqiqot mavzusi",
+    "btnPodrobnee":"Tanlash",
+    "btnHeader":"Nashrlash"
 }

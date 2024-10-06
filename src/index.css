@@ -2,11 +2,24 @@
 /* import('@fontsource/roboto/400.css'); */
 /* import('@fontsource/roboto/500.css'); */
 /* import('@fontsource/roboto/700.css'); */
+:root{
+  --color1: #1A2902;
+  --color2:#344C11;
+  --color3:#778D45;
+  --color4:#AEC09A;
+  --color5:#AEC670;
 
+
+  --rgb1:#CAEA9C;
+  --rgb2:#9BC362;
+  --rgb3:#4D7514;
+  --rgb4:#2E4E00;
+}
 *{
   font-family: "PT serif", serif;
   box-sizing: border-box;
-
+  background-color: rgb(122, 207, 245);
+   
 }
 
 
@@ -55,4 +68,25 @@
   width: 100%;
   background-color: black;
   height: 50px;
+}
+
+
+.btn{
+  height: 40px;
+  font-size: 16px;
+  margin: 0 10px;
+  /* background-color:var(--rgb2); */
+  background-color: #0056D6;
+  border: none;
+  border-radius: 5px;
+  /* color: var(--rgb4); */
+  color: white;
+  font-family: "Roboto";
+  font-weight: 200;
+  /* color: black; */
+}
+
+.btn:hover{
+  /* color: black; */
+  opacity: 0.5;
 }
