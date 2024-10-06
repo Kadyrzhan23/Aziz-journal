@@ -9,7 +9,7 @@ export default function () {
       {allPosts !== null && (
         <>
           {allPosts.map((post, index) => {
-            return <>{ index > 7 && index < 10 && <Post key={index} post={post} index={index} />}</>;
+            return <>{ index > 6 && index < 9 && <Post key={index} post={post} index={index} />}</>;
           })}
         </>
       )}

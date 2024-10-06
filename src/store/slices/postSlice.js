@@ -10,7 +10,7 @@ const postSlice = createSlice({
                 linkPdf:'https://drive.google.com/file/d/1JUAS9OKh4zQC5sjHmeczrNcILDQnaOux/view?usp=sharing',
                 img:`url(./post/amarant.jpg)`,
                 image:`./post/amarant.jpg`,
-                author:['Халилова Саида Усмонжановна1','Турғунов Азизибек Нормат уғли'],
+                author:['Халилова Саида Усмонжановна','Турғунов Азизибек Нормат уғли'],
                 description:`Аннотация. Ушбу мақолада сув танқислиги, тупроқ структурасини
                 ўзгариб бориши ва қишлоқ хўжалиги ўртасидаги ўзаро боғлиқлик уларнинг
                 бир-бирига қандай таъсир қилишини таҳлил қилиш, ушбу муаммоларни ҳал

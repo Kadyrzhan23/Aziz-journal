@@ -42,7 +42,7 @@ export default function AnimateBar() {
                           variant="contained"
                           color="error"
                           onClick={() =>
-                            navigate(`post/${index + 1}`)
+                            navigate(`post/${index}`)
                           }
                         >
                           {t("btnPodrobnee")}

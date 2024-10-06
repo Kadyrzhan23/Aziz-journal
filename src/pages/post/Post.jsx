@@ -17,14 +17,21 @@ export default function Post() {
     <div className={styles.container}>
       <div className={styles.header}>
         <img src="user.png" alt="" className={styles.avatar} />
-        
+        <div>
+          {allPosts[id].author.length > 1 ? (
+            <div className="">
+              Авторы :
+              {allPosts[id].author.map((person) => (
+                <>{person + ','}&nbsp;&nbsp;&nbsp;</>
+              ))}
+            </div>
+          ) : (
+            <div className="">{allPosts[id].author}</div>
+          )}
+        </div>
       </div>
       <div className={styles.section_1}>
-        <img
-          src={image}
-          alt="errorimage"
-          className={styles.postImage}
-        />
+        <img src={image} alt="errorimage" className={styles.postImage} />
         <div className="">
           <strong>{allPosts[id].title}</strong>
           <p>{allPosts[id].description}</p>
@@ -32,7 +39,7 @@ export default function Post() {
       </div>
 
       <a href={allPosts[id].linkPdf} className={styles.btn}>
-        Открыть файл
+        Открыть PDF файл
       </a>
     </div>
   );

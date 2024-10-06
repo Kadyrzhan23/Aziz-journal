@@ -76,7 +76,7 @@ export default function Home() {
       <div className={styles.section_02}>Недавные посты</div>
       <div className={styles.section_03}>
         <div className={styles.section_03_row_01}>
-          <RecentPosts />
+          {/* <RecentPosts /> */}
           <LastPosts />
         </div>
       </div>

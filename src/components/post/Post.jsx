@@ -7,7 +7,7 @@ export default function Post({ post ,index}) {
   const navigate = useNavigate()
   const image = `../../../public/post/post${index + 1}.jpg`
   return (
-    <div className={styles.wrapper} onClick={()=> navigate(`/post/${index + 1}`)}>
+    <div className={styles.wrapper} onClick={()=> navigate(`/post/${index}`)}>
       <div className={styles.header}>
         <img src="./post/user.png" alt="" className={styles.avatar} />
         <div className={styles.postInfo}>

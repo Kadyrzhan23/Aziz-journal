@@ -14,7 +14,7 @@ export default function LastPosts() {
                     return (
                         <>
                         {
-                            index > 8 &&
+                            index > 6 &&
                             <LastPost key={index} index={index} post={post}/>
                             }
                         </>

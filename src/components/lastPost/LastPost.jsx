@@ -19,7 +19,7 @@ export default function LastPost({ post, index }) {
     initial="initial"
     whileHover="after"
     // variants={variants}
-    className={styles.wrapper} onClick={()=> navigate(`/post/${index + 3}`)}>
+    className={styles.wrapper} onClick={()=> navigate(`/post/${index}`)}>
       <img
         src={post.image}
         alt=""
