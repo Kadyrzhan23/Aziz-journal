@@ -7,9 +7,10 @@ export default function Post() {
   const { id } = useParams();
   const allPosts = useSelector((state) => state.post.allPosts);
   const image = `../../../public/.${allPosts[id].image}`;
+  console.log(allPosts);
   const navigate = useNavigate();
   const index = useParams();
-  console.log(allPosts[id]);
+  console.log(allPosts);
   useEffect(() => {
     document.documentElement.scrollTop = 0;
   });
@@ -19,10 +20,10 @@ export default function Post() {
         <img src="user.png" alt="" className={styles.avatar} />
         <div>
           {allPosts[id].author.length > 1 ? (
-            <div style={{display:'flex',flexDirection:"column"}}>
+            <div style={{ display: "flex", flexDirection: "column" }}>
               Авторы :
               {allPosts[id].author.map((person) => (
-                <div>{person + ','}&nbsp;&nbsp;&nbsp;</div>
+                <div>{person + ","}&nbsp;&nbsp;&nbsp;</div>
               ))}
             </div>
           ) : (

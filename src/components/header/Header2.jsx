@@ -20,9 +20,9 @@ export default function Header2() {
     selectedLanguage !== null ? selectedLanguage : "ru"
   );
   const pages = [
-    { name: t("linkHome"), path: "home" },
-    { name: t("linkPosts"), path: "posts" },
-    { name: t("linkAbout"), path: "about" },
+    { name: t("linkHome"), path: "/" ,link:"/"},
+    { name: t("linkPosts"), path: "/posts" ,link:'/posts'},
+    { name: t("linkAbout"), path: "/about",link:"/about" },
     { name: t("linkContacts"), path: "contacts" },
   ];
   const navigate = useNavigate();
@@ -31,13 +31,15 @@ export default function Header2() {
   const handleOpenNavMenu = (event) => {
     setAnchorElNav(event.currentTarget);
   };
-  const handleOpenUserMenu = (event) => {
-    setAnchorElUser(event.currentTarget);
-  };
-
+ 
   const handleCloseNavMenu = () => {
     setAnchorElNav(null);
   };
+
+  const handleNavigate = (index)=>{
+    navigate(pages[index].path)
+    setActive(index)
+  }
   const langChange = (event) => {
     // console.log(event.target.value);
     const language = event.target.value;
@@ -45,6 +47,9 @@ export default function Header2() {
     window.localStorage.setItem("selectedLanguage", language);
     setLang(language);
     i18n.changeLanguage(language);
+  };
+  const handleOpenUserMenu = (event) => {
+    setAnchorElUser(event.currentTarget);
   };
 
   const handleCloseUserMenu = () => {
@@ -64,7 +69,7 @@ export default function Header2() {
                 key={item.name}
                 item={item}
                 isSelected={activeIndex === index}
-                handleClick={() => setActive(index)}
+                handleClick={() => handleNavigate(index)}
               />
             ))}
             <button className="btn">{t("btnHeader")}</button>
@@ -131,7 +136,7 @@ export default function Header2() {
                 ))}
               </Menu>
             </Box>
-            <button className="btn">{t("btnHeader")}</button>
+            {/* <button className="btn">{t("btnHeader")}</button> */}
             <span className={styles.lang}>
               <select onChange={langChange} value={lang}>
                 <option value={"ru"}>ru</option>
