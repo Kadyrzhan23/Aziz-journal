@@ -73,12 +73,12 @@ export default function Home() {
           {/* <Section /> */}
         </Container>
       </div>
-      <div className={styles.section_02}>Недавные посты</div>
+      {/* <div className={styles.section_02}>Недавные посты</div> */}
       <div className={styles.section_03}>
-        <div className={styles.section_03_row_01}>
+        {/* <div className={styles.section_03_row_01}> */}
           {/* <RecentPosts /> */}
           <LastPosts />
-        </div>
+        {/* </div> */}
       </div>
     </div>
   );

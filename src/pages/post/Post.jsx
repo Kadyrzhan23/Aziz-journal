@@ -19,10 +19,10 @@ export default function Post() {
         <img src="user.png" alt="" className={styles.avatar} />
         <div>
           {allPosts[id].author.length > 1 ? (
-            <div className="">
+            <div style={{display:'flex',flexDirection:"column"}}>
               Авторы :
               {allPosts[id].author.map((person) => (
-                <>{person + ','}&nbsp;&nbsp;&nbsp;</>
+                <div>{person + ','}&nbsp;&nbsp;&nbsp;</div>
               ))}
             </div>
           ) : (

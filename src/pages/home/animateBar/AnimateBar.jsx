@@ -6,15 +6,6 @@ import { useSelector } from "react-redux";
 import { useNavigate } from "react-router-dom";
 export default function AnimateBar() {
   const { t } = useTranslation();
-  const arr = [1, 2, 3, 4, 5, 6, 7];
-  const url = [
-    `url(./post/amarant.jpg)`,
-    `url(./post/medical1.jpg)`,
-    `url(./post/post2.jpg)`,
-    `url(./post/medical2.jpg)`,
-  ];
-  const title = [];
-  const links = [];
   const allPosts = useSelector((state) => state.post.allPosts);
   const navigate = useNavigate();
   return (
@@ -37,7 +28,6 @@ export default function AnimateBar() {
                         {/* <Button className={styles.btn}>Подобнее</Button> */}
                         <button
                           className={styles.button}
-                          // href={`post/${index + 1}`}
                           size="small"
                           variant="contained"
                           color="error"
